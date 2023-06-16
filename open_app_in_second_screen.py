@@ -1,34 +1,26 @@
-from pywinauto import Application
-from pywinauto.timings import TimeoutError
-import time as time
 import pygetwindow as gw
-import pyautogui
-from pywinauto import Desktop
-from screeninfo import get_monitors
+import subprocess
+import time
 
-def abrir_app_segunda_tela(app_path, app_name):
-    # Abrir o aplicativo
-    app = Application().start(app_path)
-    time.sleep(2)
-    # Encontre o aplicativo pelo título da janela
-    aplicativo = gw.getWindowsWithTitle(app_name)[0]
-    # Obtenha as informações sobre as telas disponíveis
-    telas = get_monitors()
+def openApp(posicao_x, posicao_y, caminho, nome):
+    # Execute o comando para abrir o aplicativo
+    subprocess.Popen(caminho)
 
-    time.sleep(2)
+    # Aguarde um pequeno intervalo para garantir que o aplicativo tenha tempo para abrir
+    time.sleep(1)
 
-    # Mova a janela para a segunda tela
-    aplicativo.move(telas[0].x, telas[0].y)
+    # Encontre a janela do aplicativo pelo título ou parte do título
+    janela = gw.getWindowsWithTitle(nome)[0]
+    # ou janela = gw.getWindowsWithTitle("Parte_do_Título")[0]
+
+    # Defina a posição da janela
+    janela.moveTo(posicao_x, posicao_y)
 
     # Maximize a janela (opcional)
-    aplicativo.maximize()
-
+    janela.maximize()
     # Traga a janela para frente (opcional)
-    aplicativo.activate()
+    janela.activate()
 
 
-
-# Exemplo de uso
-app_path = r"calc"
-app_name = "Calculadora"
-abrir_app_segunda_tela(app_path, app_name)
+# Exemplo de Uso
+openApp(1920, 10, r"calc", "Calculadora")
