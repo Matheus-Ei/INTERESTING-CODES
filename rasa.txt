@@ -12,3 +12,7 @@ Para Usar um Modelo RASA:
 
 
 }
+8-Ou para mandar o chat pelo cmd voce pode fazer da seguinte forma
+  8.1-Execute o codigo no CMD aberto na pasta do modelo ´rasa run -m models --enable-api --cors "*" --debug´
+  8.2-Execute o codigo no CMD aberto na pasta do modelo ´rasa shell´
+  8.3-Agora é so mandar as mensagens de chat e esperar as respostas...
