@@ -1,5 +1,5 @@
 Para Usar um Modelo RASA:
-1-Baixe a Versão 3.7 ou 3.8 do python, você pode encontra-la no site:
+1-Baixe a Versão 3.7 ou 3.8 do python, você pode encontra-la no site do Python #C:\Users\t4iga\AppData\Local\Programs\Python\Python38\python.exe -m pip install rasa
 2-Instale o RASA pelo CMD com o comando: ´pip install RASA´
 3-Escolha uma pasta de sua preferencia e abra o CMD nela
 4-Execute o comando ´rasa init --no-prompt´ no CMD dentro da Pasta para inicializar um projeto RASA pré pronto
