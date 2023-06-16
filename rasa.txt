@@ -1,0 +1,14 @@
+Para Usar um Modelo RASA:
+1-Baixe a Versão 3.7 ou 3.8 do python, você pode encontra-la no site:
+2-Instale o RASA pelo CMD com o comando: ´pip install RASA´
+3-Escolha uma pasta de sua preferencia e abra o CMD nela
+4-Execute o comando ´rasa init --no-prompt´ no CMD dentro da Pasta para inicializar um projeto RASA pré pronto
+5-Edite os valores dos arquivos para treinar o modelo de diferentes formas, siga a documentação e a sintaxe
+6-Treine o modelo com o comando: ´rasa train´
+7-Para usar o codigo é so criar um arquivo em Python com os seguintes comandos dentro dele:
+{
+
+
+
+
+}
