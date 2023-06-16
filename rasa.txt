@@ -31,10 +31,14 @@ while True:
 
     # Exibir as respostas do bot
     for response in responses:
-        print("Bot:", response["text"])
+        if 'text' in response:
+            print("Bot:", response["text"])
+        else:
+            print("Bot: Resposta inválida")
 
 
 }
+
 8-Ou para mandar o chat pelo cmd voce pode fazer da seguinte forma
   8.1-Execute o codigo no CMD aberto na pasta do modelo ´rasa run -m models --enable-api --cors "*" --debug´
   8.2-Execute o codigo no CMD aberto na pasta do modelo ´rasa shell´
